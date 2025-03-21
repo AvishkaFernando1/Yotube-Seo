@@ -1,0 +1,380 @@
+.generator-container {
+    padding: 120px 5% 60px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(217, 11, 11, 0.1) 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.generator-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.generator-header i {
+    font-size: 3rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.generator-header h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+}
+
+.generator-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(217, 11, 11, 0.1);
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.input-section {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(217, 11, 11, 0.1);
+}
+
+.input-section label {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 11, 11, 0.2);
+    border-radius: 8px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.input-section input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(217, 11, 11, 0.2);
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(217, 11, 11, 0.3);
+}
+
+.results-section {
+    padding: 2rem;
+}
+
+.results-section h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(217, 11, 11, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.result-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.result-text {
+    color: var(--text-secondary);
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .generator-container {
+        padding: 100px 3% 40px;
+    }
+    
+    .generator-header h1 {
+        font-size: 2rem;
+    }
+}
+/* Add these styles to your existing generator.css */
+
+/* Tag Generator Specific Styles */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: rgba(217, 11, 11, 0.1);
+    border: 1px solid rgba(217, 11, 11, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.tag:hover {
+    background: rgba(217, 11, 11, 0.2);
+    transform: translateY(-2px);
+}
+
+.copy-all-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #d90b0b; /* Changed to red */
+    border: 1px solid rgba(217, 11, 11, 0.4);
+    color: #ffffff; /* Changed to white for better contrast */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.copy-all-btn:hover {
+    background: #b80909; /* Darker red on hover */
+    box-shadow: 0 0 15px rgba(217, 11, 11, 0.4);
+}
+
+/* Description Generator Specific Styles */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 11, 11, 0.2);
+    border-radius: 8px;
+    color: var(--text-primary);
+    resize: vertical;
+    transition: var(--transition);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(217, 11, 11, 0.2);
+}
+
+.description-preview {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(217, 11, 11, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.description-text {
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+    margin-right: 2rem;
+}
+
+.format-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.format-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: rgba(217, 11, 11, 0.1);
+    border: 1px solid rgba(217, 11, 11, 0.2);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.format-btn:hover {
+    background: rgba(217, 11, 11, 0.2);
+    transform: translateY(-2px);
+}
+
+select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 11, 11, 0.2);
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(217, 11, 11, 0.2);
+}
+/* Add to your existing styles */
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+ 
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.copy-btn:hover {
+    transform: scale(1.2);
+}
+
+.generate-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Add these styles for tag generator */
+.tag-cloud {
+  margin-top: 20px;
+}
+
+.loading, .tag-message, .error-message {
+  color: #666;
+  padding: 10px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(217, 11, 11, 0.2);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-item:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(217, 11, 11, 0.2);
+}
+
+.tag-item .tag-text {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tag-item.removing {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.tag-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.tag-copy, .tag-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8); /* Updated for better contrast */
+}
+
+.tag-copy:hover, .tag-remove:hover {
+  color: #ffffff; /* Brighter on hover */
+}
+
+.copy-all-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tags-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,312 @@
+/* Pricing Section */
+.pricing {
+    padding: 6rem 5%;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.pricing-card.premium {
+    background: linear-gradient(135deg, #EEF2FF 0%, #ffffff 100%);
+    border: 2px solid #d90b0b;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d90b0b;
+    margin: 1.5rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.pricing-card li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.pricing-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pricing-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Footer */
+footer {
+    background: var(--background-light);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .tools-container,
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card {
+        padding: 2rem;
+    }
+}
+/* Pricing Page Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.8s ease-out 0.3s forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Enhanced Pricing Cards */
+.pricing-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-gradient);
+    color: rgb(17, 16, 16);
+    padding: 8px 40px;
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feature-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.feature-list li:nth-child(1) { animation-delay: 0.8s; }
+.feature-list li:nth-child(2) { animation-delay: 1.0s; }
+.feature-list li:nth-child(3) { animation-delay: 1.2s; }
+.feature-list li:nth-child(4) { animation-delay: 1.4s; }
+.feature-list li:nth-child(5) { animation-delay: 1.6s; }
+
+.feature-list li i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Animation */
+.pricing-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease-out;
+}
+
+.pricing-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Card Hover Effect */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(217, 11, 11, 0.15);
+}
+/* Update pricing section background */
+.pricing {
+    background: linear-gradient(135deg, rgba(217, 11, 11, 0.1) 0%, rgba(0, 0, 0, 0.95) 100%);
+    padding: 8rem 5% 6rem;
+}
+
+.pricing h2 {
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark theme for pricing cards */
+.pricing-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(217, 11, 11, 0.1);
+    color: var(--text-primary);
+}
+
+.pricing-card.premium {
+    background: rgba(217, 11, 11, 0.05);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 30px rgba(217, 11, 11, 0.2);
+}
+
+.pricing-card h3 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price span {
+    color: var(--text-secondary);
+    -webkit-text-fill-color: var(--text-secondary);
+}
+
+.pricing-card li {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pricing-card li i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Enhanced hover effects */
+.pricing-card:hover {
+    background: rgba(217, 11, 11, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 40px rgba(217, 11, 11, 0.3);
+}
+
+.popular-badge {
+    background: var(--primary-gradient);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling update */
+.pricing-button {
+    background: var(--primary-gradient);
+    border: 1px solid rgba(217, 11, 11, 0.3);
+    box-shadow: 0 4px 15px rgba(217, 11, 11, 0.2);
+}
+
+.pricing-button:hover {
+    box-shadow: 0 6px 20px rgba(217, 11, 11, 0.4);
+}
+
+/* Add glow effect on hover */
+.pricing-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: var(--primary-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Generator - YT SEO Manager</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="foter.css">
+    <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">YT SEO Manager</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="generator-container">
+        <div class="generator-header">
+            <i class="fas fa-tags"></i>
+            <h1>Tag Generator</h1>
+        </div>
+        
+        <div class="generator-content">
+            <div class="input-section">
+                <label>User needs </label>
+                <input type="text" id="video-url" placeholder="Enter your Reqirements">
+                
+              
+                
+                <button class="generate-btn">
+                    <i class="fas fa-magic"></i>
+                    Generate Tags
+                </button>
+            </div>
+
+            <div class="results-section">
+                <h3>Generated Tags</h3>
+                <div class="tag-cloud">
+                    <!-- Tags will be dynamically added here -->
+                </div>
+                <button class="copy-all-btn">
+                    <i class="fas fa-copy"></i> Copy All Tags
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Change this line to point to the correct JS file -->
+    <script src="tag-generator.js"></script>
+</body>
+</html>

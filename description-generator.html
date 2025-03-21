@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description Generator - YT SEO Manager</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="foter.css">
+    <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">YT SEO Manager</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="generator-container">
+        <div class="generator-header">
+            <i class="fas fa-file-alt"></i>
+            <h1>Description Generator</h1>
+        </div>
+        
+        <div class="generator-content">
+            <div class="input-section">
+               <!--  <label for="video-url">Video URL</label>
+                <input type="text" id="video-url" placeholder="Enter your YouTube video URL"> -->
+                
+                <label for="video-summary">Video Summary</label>
+                <textarea id="video-summary" placeholder="Brief summary of your video content"></textarea>
+                
+                <button class="generate-btn">
+                    <i class="fas fa-magic"></i> Generate Description
+                </button>
+              <!--  <label for="call-to-action">Call to Action</label>
+                <input type="text" id="call-to-action" placeholder="What should viewers do? (Subscribe, Visit website, etc.)">--> 
+                
+                
+            </div>
+
+            <div class="results-section">
+                <h3>Generated Description</h3>
+                <div class="description-preview">
+                    <div class="description-text"></div>
+                </div>
+                <button class="copy-description-btn">
+                    <i class="fas fa-copy"></i> Copy Description
+                </button>
+            </div>
+               
+              <!--   <div class="format-options">
+                    <button class="format-btn" data-format="emoji">Add Emojis</button>
+                    <button class="format-btn" data-format="timestamps">Add Timestamps</button>
+                    <button class="format-btn" data-format="links">Add Social Links</button>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Remove generator.js and only use description-generator.js -->
+    <script src="description-generator.js"></script>
+</body>
+</html>
